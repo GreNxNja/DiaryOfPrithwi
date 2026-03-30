@@ -1,0 +1,2 @@
+# DiaryOfPrithwi
+Blog website
