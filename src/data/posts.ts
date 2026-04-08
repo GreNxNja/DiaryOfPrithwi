@@ -1,6 +1,7 @@
-import post4 from "@/assets/Kashi.jpg";
-import post7 from "@/assets/Electricity.jpg";
-
+import kashi from "@/assets/Kashi.jpg";
+import electricity from "@/assets/Electricity.jpg";
+import dehradun from "@/assets/dehradun.jpg";
+import amritsar from "@/assets/Amritsar.jpg";
 export interface BlogPost {
   slug: string;
   image: string;
@@ -15,7 +16,7 @@ export interface BlogPost {
 export const posts: BlogPost[] = [
   {
     slug: "kashi-vishwanath-where-divinity-meets-the-dust",
-    image: post4,
+    image: kashi,
     category: "Travel",
     title: "Kashi Vishwanath: Where Divinity Meets the Dust",
     excerpt:
@@ -48,12 +49,96 @@ Varanasi will not let you leave unchanged. The city is too old, too layered, too
 
 And you will return. Everyone does.`,
   },
+  {
+    slug: "amritsar-golden-temple-positivity-prasad-and-royal-punjab",
+    image: amritsar, // Replace with actual Amritsar/Golden Temple image when available
+    category: "Travel",
+    title: "Amritsar: The Golden Glow That Pulls You In",
+    excerpt:
+      "Stepping into Amritsar feels like entering a living kingdom of warmth, equality, and divine sweetness. From my first awkward visit to the Golden Temple to the unforgettable malai lassi, this city leaves a royal imprint on your soul.",
+    date: "Apr 09, 2026",
+    readTime: "8 min read",
+    content: `There are cities that impress you. And then there’s Amritsar — a place where you feel royalty the moment you step in.
+
+  Punjab’s spirit hits you instantly. The air feels cleaner, the roads wider and better maintained, the architecture grand yet graceful, and the culture so vibrant that you don’t just observe it — you want to dive in and become part of it. The people carry themselves with a natural pride and warmth. Even the women have a graceful confidence that adds to the charm of the city. There’s an unmistakable regal energy in Amritsar that makes you sit up straighter and smile wider.
+
+  But nothing prepares you for the Golden Temple.
+
+  My first experience was honestly quite funny. I reached the entrance, completely unaware of the customs, and was gently stopped by a sevadar who pointed to my bare head with a kind smile. Someone immediately handed me an orange scarf. I tied it awkwardly and stepped inside, feeling a little embarrassed but mostly curious.
+
+  The moment I crossed the threshold, everything changed.
+
+  A wave of pure positivity washed over me from the very first step. The air itself feels lighter, calmer, and filled with an almost tangible sense of peace. The Golden Temple (Sri Harmandir Sahib) glistens in the middle of the sacred sarovar, its reflection shimmering in the water like a divine dream. You instantly understand why people say it’s not just a gurudwara — it’s a living embodiment of humility, devotion, and love.
+
+  The positivity here is addictive. You want to get twirled in it, stay wrapped in it for hours. Whether it’s the soft kirtan playing continuously, the devotees doing parikrama around the temple, or the gentle sound of water, everything invites you to slow down and breathe.
+
+  The food experiences are unforgettable.
+
+  The kada prasad is pure divine pleasure. That warm, ghee-drenched, melt-in-your-mouth halwa is served with so much love that the first spoonful feels almost sacred. It’s rich, sweet, and deeply satisfying — the kind of taste that stays with you long after you’ve left. I found myself going back for seconds (and sometimes thirds) every single time.
+
+  Then there’s the Langar. Sitting on the floor with thousands of other people, shoulder to shoulder, eating the same simple meal — dal, roti, rice, and sabzi — is a powerful experience. No VIP treatment, no special plates for anyone. Everyone is equal here. That sense of equality and brotherhood in the langar hall is something I wish the outside world practiced more. The food tastes even better because it’s cooked and served with devotion. Langar quickly becomes second nature — you finish one meal and already start looking forward to the next one.
+
+  The interiors of the Golden Temple deserve an entire post of their own. The intricate gold work, the beautiful marble inlay, the mirror work, and the sheer serenity inside the sanctum sanctorum create an atmosphere that is both grand and deeply intimate at the same time.
+
+  When you finally step out after hours of peace, you’re gently thrown back into the lively energy of the city. The bustling bazaar right outside is a riot of colors, sounds, and smells — phulkari dupattas, juttis, dry fruits, fresh juices, and every kind of souvenir you can imagine.
+
+  But the absolute star of the exit experience is the massive tumbler of Malai Peda Lassi they serve in the shops around the temple. It’s not just lassi — it’s a full meal in a glass. A thick, creamy layer of malai almost a centimeter thick sits on top of the sweetest, densest lassi you’ve ever had. The first sip (or rather, first scoop) is pure indulgence. Cold, rich, and utterly satisfying after a long day of walking and soaking in the spiritual energy.
+
+  Amritsar didn’t just show me a holy place. It showed me a way of living — where devotion, equality, delicious food, and warm hospitality come together effortlessly.
+
+  I left the city with a full heart, a slightly fuller stomach, and a deep respect for Punjab’s royal soul.
+
+  If you ever go, remember these three things:
+  - Cover your head with humility.
+  - Eat the prasad and langar with gratitude.
+  - Don’t miss that giant malai lassi on your way out.
+
+  Waheguru Ji Ka Khalsa, Waheguru Ji Ki Fateh.
+
+  Amritsar, I’ll be back soon.`,
+  },
+  {
+    slug: "dehradun-fog-mountains-and-the-birth-of-a-dream",
+    image: dehradun, // Replace with actual Dehradun image import when available
+    category: "Travel",
+    title:
+      "Dehradun: Foggy Mountains, a Temple Prasad, and the Tiger That Changed Everything",
+    excerpt:
+      "In 2019, a simple trip to Dehradun quietly rewired something deep inside me. Between misty mountain roads, morning prasad at Mata Rani Mandir, and the roar of a biker gang on the snake trails, I met my first Triumph Tiger — and a dream was born.",
+    date: "Apr 08, 2026",
+    readTime: "8 min read",
+    content: `In 2019, I went to Dehradun for what I thought would be an ordinary trip. I came back carrying a dream that still rides with me.
+
+  The city welcomed me with that special Himalayan foothills air — crisp, slightly sweet with pine, and carrying the promise of mountains just beyond the horizon. But it wasn’t the city itself that shifted something in me. It was the road that climbs out of it.
+
+  The foggy mountain drives hit differently. Early mornings, when the mist hangs so thick that the world feels wrapped in cotton wool, every curve feels like a gentle revelation. The road winds upward through dense forests, the kind where trees lean in like old friends sharing secrets. Visibility drops to a few meters, headlights cut soft tunnels through the white, and the only sound is the low hum of the engine and the occasional call of a bird you can’t see. There’s a stillness there that forces you to slow down, to breathe deeper, to actually be present. Something inside me switched during those drives — a quiet realization that life feels more alive when you’re moving through nature rather than past it.
+
+  One particular morning stays etched in memory. I had planned to visit the Mata Rani Mandir, a serene temple tucked away in the hills near Dehradun. The air was cool and damp as I climbed the steps. Inside, the temple felt warm and alive with the soft glow of diyas and the gentle fragrance of incense and fresh flowers. The priest offered me prasad — warm halwa and some fruits — with a smile that felt like a blessing itself. Eating that simple prasad cross-legged on the cool marble floor, surrounded by the soft chanting and the early light filtering through, filled me with a deep sense of peace. It wasn’t just food; it carried that quiet maternal grace only temple prasad seems to hold.
+
+  After the darshan, I stepped outside to get some fresh air. The mist had lifted just enough to reveal the winding mountain road below — the famous “snake trails” that twist and turn through the hills like a living serpent. And then I heard it: the unmistakable deep, throaty rumble of motorcycles in formation.
+
+  A biker gang was riding up the trail, their machines slicing through the remaining fog with precision and power. Helmets, jackets, and that unmistakable camaraderie of people who chase horizons together. Among them, one bike stood out instantly — a sleek, powerful Triumph Tiger. Its adventure styling, the commanding presence, the way it devoured the curves with effortless confidence... I had never seen one in real life before. Time slowed down as it passed. The rider gave a small nod, the kind road brothers share, and in that single moment, everything clicked.
+
+  That was the exact instant my dream was born.
+
+  From that foggy morning in Dehradun, the desire to own a proper tourer — a motorcycle built for long roads, mountain passes, and endless adventures — took root deep in my soul. The Tiger wasn’t just a machine; it represented freedom, capability, and the spirit of exploration that the Himalayas quietly demand from you. I stood there long after the gang had disappeared around the next bend, the sound of their engines fading into the mist, feeling a new chapter quietly opening inside me.
+
+  Dehradun itself is a beautiful blend of old and new — colonial-era buildings standing shoulder to shoulder with bustling markets, the distant silhouette of the mountains always calling. But for me, that 2019 visit became much more than a vacation. It became the place where divinity (in the form of Mata Rani’s quiet blessings), nature (in those mystical foggy drives), and raw adventure (the biker gang on the snake trails) collided perfectly.
+
+  Years later, every time I see a Triumph Tiger or any capable tourer, my mind drifts back to that temple morning, the taste of warm prasad still lingering, the cool mountain air on my face, and the roar of engines echoing through the mist.
+
+  Some places don’t just give you memories. They plant dreams that keep growing.
+
+  Dehradun, thank you for switching something on in me that has never switched off.
+
+  If you ever find yourself in the foothills of Uttarakhand, take the mountain roads at dawn. Visit a temple. Have the prasad slowly. And keep your eyes open — you never know what might ride past and change the direction of your life forever.`,
+  },
 ];
 
 export const techPosts: BlogPost[] = [
   {
     slug: "shock-to-power-electrician-energy-harvester",
-    image: post7,
+    image: electricity,
     category: "Tech",
     title:
       "Shock to Power: Could Electricians Turn Accidental Shocks into Stored Energy?",
