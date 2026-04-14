@@ -2,6 +2,9 @@ import kashi from "@/assets/Kashi.jpg";
 import electricity from "@/assets/Electricity.jpg";
 import dehradun from "@/assets/dehradun.jpg";
 import amritsar from "@/assets/Amritsar.jpg";
+import delhi from "@/assets/Delhi.jpg";
+import taj from "@/assets/Taj.jpg";
+
 export interface BlogPost {
   slug: string;
   image: string;
@@ -96,6 +99,110 @@ And you will return. Everyone does.`,
   Waheguru Ji Ka Khalsa, Waheguru Ji Ki Fateh.
 
   Amritsar, I’ll be back soon.`,
+  },
+  {
+    slug: "lotus-temple-delhi-silence-amidst-chaos",
+    image: delhi,
+    category: "Travel",
+    title: "Lotus Temple: Silence in the Middle of Chaos",
+    excerpt:
+      "A chaotic 4 a.m. arrival in Delhi, the search for a washroom, roaring bikers in the dark, and then — an hour of absolute silence inside the Lotus Temple that changes everything.",
+    date: "Apr 04, 2026",
+    readTime: "6 min read",
+    content: `The 4th of April didn’t start like a peaceful travel day. It started at 4 a.m. in complete chaos.
+
+  We had just arrived in Delhi as part of our North India bus tour, and the bus terminus was already alive — crowded, noisy, and slightly overwhelming. At that hour, one thing became very clear very quickly: finding a public washroom was going to be a task. A long queue had already formed, and there wasn’t much choice but to wait it out.
+
+  Somewhere in the middle of that exhaustion, something unexpected broke the monotony. A group of bikers tore through the road nearby, engines roaring in the quiet of the early morning. The sound of their exhausts echoed through the half-sleeping city, and for a moment, at 4 a.m., it actually felt energizing. It was chaotic, loud, and weirdly motivating at the same time.
+
+  As the morning finally set in, we made our way to the Lotus Temple.
+
+  I didn’t expect much. I assumed it would be like any other mandir — something similar to a Krishna or Buddha temple that’s famous more for its location than its experience. But the moment you step inside, that assumption falls apart.
+
+  The process itself is different. Footwear isn’t allowed, which is normal, but instead of a standard stand, you’re given a bag to carry your slippers. You deposit them outside and walk in quietly. No rush, no pushing.
+
+  And then the silence hits you.
+
+  The Lotus Temple isn’t really a traditional mandir. It’s more of a meditation space. There are no rituals, no loud chants, no distractions. Just stillness. A kind of silence that feels almost physical.
+
+  I sat there for what felt like a few minutes. It turned out to be almost an hour.
+
+  There’s something about that space — the calmness doesn’t feel forced, it just exists. Naturally. You don’t have to try to be peaceful; it just happens.
+
+  Stepping outside felt like switching realities.
+
+  The crowd had multiplied. Long queues stretched across the gardens, wrapping around the entire complex. Even after crossing multiple lines, the number of people waiting to get in just kept increasing. The contrast between the inside and the outside couldn’t have been sharper.
+
+  After that, breakfast felt simple but perfect. Chapatis and chana sabzi — nothing fancy, nothing elaborate. But after a sleepless night and constant travel, it felt like exactly what was needed. Sometimes food doesn’t need complexity, just timing.
+
+  Delhi as a city is strange in the best way. It’s chaotic, messy, and overwhelming at times, but it has a pull you can’t ignore. There’s a raw, old-world energy to it — something more rooted and real compared to polished, modern cities.
+
+  The day continued after that. More places, more movement, more noise.
+
+  But that one hour inside the Lotus Temple stayed.
+
+  Sometimes, a place doesn’t impress you with grandeur. It just shows you what silence actually feels like.
+
+  And that’s enough.`,
+  },
+  {
+    slug: "agra-taj-mahal-expectation-vs-reality",
+    image: taj, // make sure to import: import taj from "@/assets/taj.jpg";
+    category: "Travel",
+    title: "Agra: Expectation vs Reality at the Taj",
+    excerpt:
+      "I went to the Taj Mahal expecting nothing more than a checkbox. What I got instead was something slower, quieter—and far more real than the hype suggests.",
+    date: "Apr 05, 2026",
+    readTime: "7 min read",
+    content: `If Taj Mahal had a reputation to live up to, I wasn’t buying into it—at least not at first.
+
+  Coming straight from Delhi, I was already overstimulated. Too much travel, too many places, too many “must-see” spots. The Taj, for me, was just another checkbox. Overhyped, over-photographed, over-discussed. I was curious, sure—but not excited.
+
+  That changed slowly.
+
+  We reached Agra the same way we had been traveling through most of North India—bus terminals, short halts, and one-night stays. No luxury hotels, no elaborate plans. Just movement. Agra, for us, wasn’t a destination—it was a pause between destinations.
+
+  The morning started simply: muri and ghugni. Nothing fancy, just enough to get going. Around me, there was a different kind of energy though. First-timers like me were trying to act casual, while the veterans—my Nana and Nani included—were already hyping it up like they knew something we didn’t.
+
+  Then came the part I didn’t expect: the process.
+
+  Security at the Taj isn’t casual. It’s layered. Bags, cameras, even small items—everything is checked, restricted, or regulated. You don’t just “walk in.” You pass through systems. It almost builds a sense of anticipation whether you want it or not.
+
+  And then, the gates.
+
+  There’s that first entry—functional, administrative. But the second one? That’s where it hits. You walk through a relatively smaller gateway, and suddenly the frame opens up. The garden stretches out, and at the far end, perfectly centered, stands the Taj.
+
+  At that distance, it’s almost unreal. Minimal. Isolated. Like the world around it has been intentionally erased.
+
+  Walking toward it was a different story—literally. The stone pathway was scorching. Mid-October sun, no mercy. I was half-walking, half-hopping just to keep moving. It was only when I reached the marble platform that things settled down. The temperature dropped slightly, shadows helped, and the white marble underfoot felt almost relieving.
+
+  That contrast—burning stone to cool marble—sticks with you.
+
+  As you circle around the complex, Yamuna River quietly runs alongside. I had my own assumptions about it, mostly shaped by headlines and images. But seeing it in person was different. Not pristine, not perfect—but not as bad as I had imagined either. It’s one of those things you can’t outsource your opinion on.
+
+  Inside the main structure, access is usually restricted, especially near the actual tomb of Mumtaz Mahal. But that day was different—free entry, special access. Timing worked in our favor.
+
+  Stepping inside felt like entering a completely different environment. Cooler by at least 10–15 degrees. Dimmer. Quieter. The air carried a faint smell of roses. It didn’t feel like a monument anymore—it felt enclosed, almost sacred. Controlled.
+
+  For a place I didn’t expect much from, that moment shifted something.
+
+  After that, things went back to being… typical.
+
+  Photos were mandatory—the classic forced perspective shots where you “hold” the Taj between your fingers. You can’t escape that ritual. Then came the local photographers promising instant prints. We went for it, obviously.
+
+  And then the guy disappeared.
+
+  For a while, it genuinely felt like we had been scammed. No sign of him, no direction, nothing. After asking around, we found out his shop was tucked behind some alley. Not exactly intuitive. Eventually, we tracked him down, got the photos, and closed that chapter.
+
+  No drama—just unnecessary friction.
+
+  I wrapped up the experience the simplest way possible: ice cream, standing somewhere outside, letting it all settle.
+
+  The strange part?
+
+  I went in expecting nothing. I came out… not amazed, not overwhelmed—but quietly impressed.
+
+  The Taj doesn’t hit you all at once. It builds. Slowly. And if you give it enough time, it gets to you.`,
   },
   {
     slug: "dehradun-fog-mountains-and-the-birth-of-a-dream",
