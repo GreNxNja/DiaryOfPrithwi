@@ -4,6 +4,7 @@ import dehradun from "@/assets/dehradun.jpg";
 import amritsar from "@/assets/Amritsar.jpg";
 import delhi from "@/assets/Delhi.jpg";
 import taj from "@/assets/Taj.jpg";
+import adikailash from "@/assets/AdiKailash.jpg";
 
 export interface BlogPost {
   slug: string;
@@ -239,6 +240,47 @@ And you will return. Everyone does.`,
   Dehradun, thank you for switching something on in me that has never switched off.
 
   If you ever find yourself in the foothills of Uttarakhand, take the mountain roads at dawn. Visit a temple. Have the prasad slowly. And keep your eyes open — you never know what might ride past and change the direction of your life forever.`,
+  },
+  {
+    slug: "adi-kailash-tungnath-shivas-call-misty-treks-and-quiet-fire",
+    image: adikailash,
+    category: "Travel",
+    title: "Adi Kailash & Tungnath: Shiva’s Quiet Call After All These Years",
+    excerpt:
+      "Years later, the call returns — not loud, not dramatic, but steady and undeniable. A journey to Adi Kailash and Tungnath, fueled by the calm, deep hype I felt trekking through Gurdum and Myanbhanjang. This is the kind of pull that fills you completely and still leaves you wanting more.",
+    date: "Jun 15, 2026",
+    readTime: "9 min read",
+    content: `There are callings that arrive like thunder. And then there is Shiva’s call — quiet, persistent, returning after years of silence, astonishing you every single time it surfaces.
+
+  Recently, that familiar pull has grown stronger. After all these years of travel, of chasing mountains, temples, and inner stillness, the call to Adi Kailash and Tungnath has returned. It doesn’t shout. It doesn’t create restless excitement. It simply sits in the chest like a deep, steady flame — warm, certain, and impossible to ignore.
+
+  What astonishes me most is how it always finds me when I least expect it, yet exactly when I need it.
+
+  The recent treks in Gurdum and Myanbhanjang lit something inside that had been waiting. Those paths weren’t just physical walks — they were preparation. The trails wound through mist-laden forests, rhododendron slopes, and high meadows where the air itself felt sacred. Every step carried a different quality of presence. The kind of trekking where your breath syncs with the mountain, where silence between thoughts stretches longer, and where the body works hard but the mind grows strangely quiet.
+
+  That experience gave me a new kind of hype — not the jumpy, restless kind that fades quickly. This was calm, controlled, and deeply nourishing. The kind that fills you from within, makes you feel whole, and yet leaves a gentle hunger for more. A peaceful urgency. A soul-level readiness.
+
+  And now that readiness points toward Adi Kailash — the original abode of Shiva, far more remote and raw than its more famous counterpart. I can already picture the high-altitude landscapes, the barren beauty of the Kailash Parvat region in Uttarakhand, the sacred lakes, and the ancient trails that have carried pilgrims for centuries. There’s something profoundly humbling about approaching a place considered Shiva’s home. The air gets thinner, the world quieter, and whatever is unnecessary inside you starts falling away with every step.
+
+  Tungnath, too, keeps appearing in my thoughts — the highest Shiva temple in the world, perched at over 3,680 meters. The trek to Tungnath through the Chandanshila meadows is legendary for good reason. I remember hearing stories of the temple opening only for a few months a year, of the raw power of the place, and of how the surrounding Himalayan panorama makes you feel beautifully small.
+
+  The combination feels perfect. Adi Kailash for the deeper, more remote connection. Tungnath for that dramatic high-altitude darshan. Both calling to the same inner longing.
+
+  I find myself thinking about the small rituals that will define the journey — carrying a small rudraksha, offering whatever feels right at the moment, sitting in silence near the temple, letting the wind and the altitude do their work. I think about the early morning starts, the cold mountain air filling my lungs, the sound of trekking poles on rocky paths, and the slow, steady heartbeat of devotion that grows stronger with every meter gained.
+
+  This isn’t just another checkbox on a travel list. This feels like answering a long-standing invitation.
+
+  The trekking experience I gathered recently in Gurdum and Myanbhanjang has prepared me in ways I couldn’t have planned. It taught me how to walk with presence rather than rush. It showed me how the mountains reward patience and quiet determination. And most importantly, it left me with that rare feeling — full, yet hungry for more. The perfect state for a Shiva yatra.
+
+  I can’t wait to stand there, wherever the trails lead, and feel that ancient stillness again. To let the call that has astonished me for years finally meet its destination, even if only for a brief while.
+
+  Shiva has always been patient. And so, I prepare — not with frenzy, but with the same calm, controlled fire that these recent mountains kindled in me.
+
+  The trails are waiting. The temples are waiting. And something deeper is waiting too.
+
+  I’ll see you soon, Adi Kailash. I’ll see you soon, Tungnath.
+
+  Om Namah Shivaya.`,
   },
 ];
 
