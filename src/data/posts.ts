@@ -6,6 +6,7 @@ import delhi from "@/assets/Delhi.jpg";
 import taj from "@/assets/Taj.jpg";
 import adikailash from "@/assets/AdiKailash.jpg";
 import robotnature from "@/assets/RobotNature.jpg";
+import gurdum from "@/assets/Gurdum.jpeg";
 
 export interface BlogPost {
   slug: string;
@@ -459,4 +460,42 @@ Stay safe, and keep thinking creatively.`,
   },
 ];
 
-export const allPosts = [...posts, ...techPosts];
+export const culturePosts: BlogPost[] = [
+  {
+    slug: "gurdum-the-cleanest-hearts-i-have-ever-met",
+    image: gurdum, // add asset: import gurdum from "@/assets/Gurdum.jpg";
+    category: "Culture",
+    title: "Gurdum: The Cleanest Hearts I Have Ever Met",
+    excerpt:
+      "Before Gurdum lit the spark for Adi Kailash, it taught me something else entirely — what it actually looks like when people have less and give more. A walk through hillside homes, hearths, and the quiet dignity of earning a living off a slope.",
+    date: "Jun 19, 2026",
+    readTime: "8 min read",
+    content: `Some places teach you geography. Gurdum taught me arithmetic — the kind where people who have almost nothing somehow keep giving you more than you can carry.
+
+  The trail up to Gurdum starts the way most Himalayan trails do — gradually, deceptively, lulling you into thinking the climb won't be that bad. It is. The ridge rises through forests of oak and rhododendron, the path narrowing into packed mud and loose stone, and somewhere around the second hour your legs stop asking questions and just move. But it isn't the climb that stays with you. It's what's waiting at the top of it.
+
+  Gurdum is barely a village in the way cities understand the word. A scattering of homes built from stone and timber, roofs of tin or slate, clinging to the slope at an angle that makes you wonder how anyone built a level floor up there at all. Smoke rises from a few chimneys in thin, unhurried lines. There's no noise except wind, the occasional bark of a dog, and somewhere below, the sound of someone chopping wood in a steady, unbothered rhythm. It feels less like arriving somewhere and more like being let in on a secret.
+
+  We stayed in a homestay that belonged to a family who had clearly been doing this — hosting tired, soaked, half-frozen strangers — for years, and yet treated us like the first guests they'd ever had. The house was small. Two rooms for sleeping, a kitchen with a wood-fired hearth, a narrow loft for storing grain and dried maize. And it was immaculate. Not staged-for-guests immaculate — actually, properly clean, the kind of clean that comes from people who take real pride in the little they have rather than apologizing for it. Every utensil had its place. The blankets were folded with a precision that put my own house, with all its conveniences, quietly to shame.
+
+  What struck me first wasn't the hospitality. It was the work.
+
+  In the morning, before the mist had even fully lifted off the ridge, the family was already moving — terraced fields needed checking, a cow needed milking, firewood needed splitting and stacking before the afternoon rain that the hills seem to schedule with eerie reliability. There was no complaining in any of it. No sighing over the cold, no resentment toward the labor. Just a steady, unbroken rhythm of people doing what needed to be done, the way their parents had, the way their children probably will. Watching someone earn their living directly off a mountainside — no middlemen, no algorithms, no inbox — does something to your sense of scale. You start measuring your own life against a very different ruler.
+
+  Breakfast was red rice, a simple vegetable curry, and tea so strong and milky it practically counted as a second meal. It was served before we'd even asked, in bowls that had clearly been used for decades, with a warmth that had nothing to do with the temperature of the food. When I tried to help carry something, clear a plate, anything — I was gently but firmly waved off. Guests don't work in these homes. It didn't matter that I wanted to. The hospitality wasn't a performance for trekkers passing through; it was just how the house functioned, full stop.
+
+  What got me most, though, was the complete absence of want in how they spoke. Not resignation — want. There was no undertone of "we wish we had more," no comparison to the cities, no envy of the people who arrive in expensive trekking gear and leave a tip and a thank-you and never think about the village again. There was only a quiet, settled contentment, the kind that doesn't need defending because it isn't trying to convince anyone of anything.
+
+  I sat outside that evening, watching the valley fold into shadow and the first stars come out sharp and close in a way they never do back in the city, and I found myself doing the thing you do in places like this — running a quiet audit of your own life. The notifications. The clutter. The endless, low-grade hunger for more that nobody up here seemed to carry at all. It wasn't guilt, exactly. It was clarity. A sudden, sharp sense of where you're actually coming from, and what the rest of the world has quietly convinced you that you need.
+
+  The next morning, before we left, the woman of the house pressed a small packet of roasted maize into my hands — for the trail, she said, like it was nothing. I tried to pay for it. She refused, the same firm, gentle wave from the day before. I understood, by then, not to push.
+
+  Walking back down the ridge, away from Gurdum, the trail felt different than it had on the way up. Lighter, maybe. Or I was just carrying it differently — not as a memory of a nice homestay, but as a kind of recalibration. A reminder that immaculate doesn't require abundance, that generosity doesn't require excess, and that some of the most complete, unhurried, dignified lives are being lived quietly on a hillside, far from anything that calls itself "developed."
+
+  I came to Gurdum for a trek. I left with a new ruler to measure things by.
+
+  Thank you, Gurdum. I hope I carry you with me longer than the maize lasted.`,
+  },
+];
+
+export const allPosts = [...posts, ...techPosts, ...culturePosts];
