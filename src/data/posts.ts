@@ -8,6 +8,12 @@ import adikailash from "@/assets/AdiKailash.jpg";
 import robotnature from "@/assets/RobotNature.jpg";
 import gurdum from "@/assets/Gurdum.jpeg";
 
+export interface BlogPostLocation {
+  name: string;
+  lat: number;
+  lng: number;
+}
+
 export interface BlogPost {
   slug: string;
   image: string;
@@ -17,6 +23,7 @@ export interface BlogPost {
   date: string;
   readTime: string;
   content: string;
+  locations?: BlogPostLocation[];
 }
 
 export const posts: BlogPost[] = [
@@ -29,6 +36,7 @@ export const posts: BlogPost[] = [
       "There are places on this earth that don't just move you — they unmake you, quietly, and put you back together differently. Varanasi is one of them. Kashi Vishwanath is its beating heart.",
     date: "Mar 10, 2026",
     readTime: "7 min read",
+    locations: [{ name: "Kashi Vishwanath, Varanasi", lat: 25.3109, lng: 83.0107 }],
     content: `There are places on this earth that don't just move you — they unmake you, quietly, and put you back together differently. Varanasi is one of them. Kashi Vishwanath is its beating heart.
 
 The city hits you before you even arrive. Somewhere on the approach — whether by train, by road, or by boat on the Ganga — the air changes. It becomes heavier, thicker, laced with the smell of incense and marigold and river clay. There's a feeling that something is asking you to slow down, not as a suggestion but as a quiet command. You lower your voice without knowing why.
@@ -64,6 +72,7 @@ And you will return. Everyone does.`,
       "Stepping into Amritsar feels like entering a living kingdom of warmth, equality, and divine sweetness. From my first awkward visit to the Golden Temple to the unforgettable malai lassi, this city leaves a royal imprint on your soul.",
     date: "Apr 09, 2026",
     readTime: "8 min read",
+    locations: [{ name: "Golden Temple, Amritsar", lat: 31.62, lng: 74.8765 }],
     content: `There are cities that impress you. And then there’s Amritsar — a place where you feel royalty the moment you step in.
 
   Punjab’s spirit hits you instantly. The air feels cleaner, the roads wider and better maintained, the architecture grand yet graceful, and the culture so vibrant that you don’t just observe it — you want to dive in and become part of it. The people carry themselves with a natural pride and warmth. Even the women have a graceful confidence that adds to the charm of the city. There’s an unmistakable regal energy in Amritsar that makes you sit up straighter and smile wider.
@@ -112,6 +121,7 @@ And you will return. Everyone does.`,
       "A chaotic 4 a.m. arrival in Delhi, the search for a washroom, roaring bikers in the dark, and then — an hour of absolute silence inside the Lotus Temple that changes everything.",
     date: "Apr 04, 2026",
     readTime: "6 min read",
+    locations: [{ name: "Lotus Temple, Delhi", lat: 28.5535, lng: 77.2588 }],
     content: `The 4th of April didn’t start like a peaceful travel day. It started at 4 a.m. in complete chaos.
 
   We had just arrived in Delhi as part of our North India bus tour, and the bus terminus was already alive — crowded, noisy, and slightly overwhelming. At that hour, one thing became very clear very quickly: finding a public washroom was going to be a task. A long queue had already formed, and there wasn’t much choice but to wait it out.
@@ -157,6 +167,7 @@ And you will return. Everyone does.`,
       "I went to the Taj Mahal expecting nothing more than a checkbox. What I got instead was something slower, quieter—and far more real than the hype suggests.",
     date: "Apr 05, 2026",
     readTime: "7 min read",
+    locations: [{ name: "Taj Mahal, Agra", lat: 27.1751, lng: 78.0421 }],
     content: `If Taj Mahal had a reputation to live up to, I wasn’t buying into it—at least not at first.
 
   Coming straight from Delhi, I was already overstimulated. Too much travel, too many places, too many “must-see” spots. The Taj, for me, was just another checkbox. Overhyped, over-photographed, over-discussed. I was curious, sure—but not excited.
@@ -217,6 +228,7 @@ And you will return. Everyone does.`,
       "In 2019, a simple trip to Dehradun quietly rewired something deep inside me. Between misty mountain roads, morning prasad at Mata Rani Mandir, and the roar of a biker gang on the snake trails, I met my first Triumph Tiger — and a dream was born.",
     date: "Apr 08, 2026",
     readTime: "8 min read",
+    locations: [{ name: "Dehradun, Uttarakhand", lat: 30.3165, lng: 78.0322 }],
     content: `In 2019, I went to Dehradun for what I thought would be an ordinary trip. I came back carrying a dream that still rides with me.
 
   The city welcomed me with that special Himalayan foothills air — crisp, slightly sweet with pine, and carrying the promise of mountains just beyond the horizon. But it wasn’t the city itself that shifted something in me. It was the road that climbs out of it.
@@ -252,6 +264,10 @@ And you will return. Everyone does.`,
       "Years later, the call returns — not loud, not dramatic, but steady and undeniable. A journey to Adi Kailash and Tungnath, fueled by the calm, deep hype I felt trekking through Gurdum and Myanbhanjang. This is the kind of pull that fills you completely and still leaves you wanting more.",
     date: "Jun 15, 2026",
     readTime: "9 min read",
+    locations: [
+      { name: "Adi Kailash, Uttarakhand", lat: 30.2333, lng: 80.65 },
+      { name: "Tungnath, Uttarakhand", lat: 30.4869, lng: 79.2167 },
+    ],
     content: `There are callings that arrive like thunder. And then there is Shiva’s call — quiet, persistent, returning after years of silence, astonishing you every single time it surfaces.
 
   Recently, that familiar pull has grown stronger. After all these years of travel, of chasing mountains, temples, and inner stillness, the call to Adi Kailash and Tungnath has returned. It doesn’t shout. It doesn’t create restless excitement. It simply sits in the chest like a deep, steady flame — warm, certain, and impossible to ignore.
@@ -467,34 +483,25 @@ export const culturePosts: BlogPost[] = [
     category: "Culture",
     title: "Gurdum: The Cleanest Hearts I Have Ever Met",
     excerpt:
-      "Before Gurdum lit the spark for Adi Kailash, it taught me something else entirely — what it actually looks like when people have less and give more. A walk through hillside homes, hearths, and the quiet dignity of earning a living off a slope.",
+      "Day one of our Darjeeling trip, and Gurdum was already teaching us something. A breathless climb up a building stacked impossibly onto a mountain, and two strangers who came down those stairs to help us — and never let us forget what real kindness looks like.",
     date: "Jun 19, 2026",
-    readTime: "8 min read",
+    readTime: "6 min read",
+    locations: [{ name: "Gurdum, West Sikkim", lat: 27.405, lng: 88.213 }],
     content: `Some places teach you geography. Gurdum taught me arithmetic — the kind where people who have almost nothing somehow keep giving you more than you can carry.
 
-  The trail up to Gurdum starts the way most Himalayan trails do — gradually, deceptively, lulling you into thinking the climb won't be that bad. It is. The ridge rises through forests of oak and rhododendron, the path narrowing into packed mud and loose stone, and somewhere around the second hour your legs stop asking questions and just move. But it isn't the climb that stays with you. It's what's waiting at the top of it.
+  Gurdum was the first place we stayed on our Darjeeling trip — day one — and it set the tone for everything that came after. The building itself was something else. It must have been thirteen or fourteen storeys tall, built straight into the slope of the mountain, and to get to where we were staying we had to climb a long stretch of steep stairs. Somewhere partway up, my breath started giving out on me. I was genuinely struggling, stopping every few steps just to get air back into my lungs.
 
-  Gurdum is barely a village in the way cities understand the word. A scattering of homes built from stone and timber, roofs of tin or slate, clinging to the slope at an angle that makes you wonder how anyone built a level floor up there at all. Smoke rises from a few chimneys in thin, unhurried lines. There's no noise except wind, the occasional bark of a dog, and somewhere below, the sound of someone chopping wood in a steady, unbothered rhythm. It feels less like arriving somewhere and more like being let in on a secret.
+  That's when two people came down those same stairs toward us. We later found out it was the wife and mother-in-law of Yogen, our driver, who had quietly arranged the entire stay for us behind the scenes. The two of them were, without exaggeration, some of the kindest people I have ever met. I still don't know where you find that kind of warmth elsewhere. Complete strangers, and yet they opened up their own home and let us stay in it like it was nothing.
 
-  We stayed in a homestay that belonged to a family who had clearly been doing this — hosting tired, soaked, half-frozen strangers — for years, and yet treated us like the first guests they'd ever had. The house was small. Two rooms for sleeping, a kitchen with a wood-fired hearth, a narrow loft for storing grain and dried maize. And it was immaculate. Not staged-for-guests immaculate — actually, properly clean, the kind of clean that comes from people who take real pride in the little they have rather than apologizing for it. Every utensil had its place. The blankets were folded with a precision that put my own house, with all its conveniences, quietly to shame.
+  That's what made the place feel rich — not just the mountains around it, but the way they treated us. We hadn't done anything to earn that kind of welcome. They helped us with everything, fed us well, and made sure we were comfortable the entire time we were there. There was no hesitation in any of it, no sense that we were a burden being managed politely. It was just how the house functioned, full stop — strangers in, strangers fed, strangers looked after.
 
-  What struck me first wasn't the hospitality. It was the work.
+  The geography of Gurdum is its own kind of beautiful. You're standing at the top of a mountain, surrounded by pine forest, and the clouds roll through constantly — covering everything in this soft white sheet one moment, and then, every so often, parting for two or three minutes at a time. In those few minutes, the whole view opens up and you get to see just how stunning the place actually is, before the clouds close back in. I sat with that view longer than I probably needed to, watching it disappear and reappear, doing the thing you do in places like this — running a quiet audit of your own life. The notifications, the clutter, the endless low-grade hunger for more that nobody up there seemed to carry at all.
 
-  In the morning, before the mist had even fully lifted off the ridge, the family was already moving — terraced fields needed checking, a cow needed milking, firewood needed splitting and stacking before the afternoon rain that the hills seem to schedule with eerie reliability. There was no complaining in any of it. No sighing over the cold, no resentment toward the labor. Just a steady, unbroken rhythm of people doing what needed to be done, the way their parents had, the way their children probably will. Watching someone earn their living directly off a mountainside — no middlemen, no algorithms, no inbox — does something to your sense of scale. You start measuring your own life against a very different ruler.
+  And running through all of it was Yogen. He was the absolute sunshine of our trip — easy to talk to, on top of every single detail, and someone who made sure we never had to worry about a thing. Even on the occasions he couldn't be there himself, he'd already arranged for things to run smoothly so that none of us suffered for it.
 
-  Breakfast was red rice, a simple vegetable curry, and tea so strong and milky it practically counted as a second meal. It was served before we'd even asked, in bowls that had clearly been used for decades, with a warmth that had nothing to do with the temperature of the food. When I tried to help carry something, clear a plate, anything — I was gently but firmly waved off. Guests don't work in these homes. It didn't matter that I wanted to. The hospitality wasn't a performance for trekkers passing through; it was just how the house functioned, full stop.
+  That kindness — his, and the kindness of his wife and mother-in-law on those stairs — is the part of Gurdum that stayed with us long after we'd left. Longer than the trip itself, honestly. A reminder that some of the most complete, unhurried, generous people you'll ever meet are living quietly on a hillside, thirteen flights up, ready to walk down and catch you when your breath gives out.
 
-  What got me most, though, was the complete absence of want in how they spoke. Not resignation — want. There was no undertone of "we wish we had more," no comparison to the cities, no envy of the people who arrive in expensive trekking gear and leave a tip and a thank-you and never think about the village again. There was only a quiet, settled contentment, the kind that doesn't need defending because it isn't trying to convince anyone of anything.
-
-  I sat outside that evening, watching the valley fold into shadow and the first stars come out sharp and close in a way they never do back in the city, and I found myself doing the thing you do in places like this — running a quiet audit of your own life. The notifications. The clutter. The endless, low-grade hunger for more that nobody up here seemed to carry at all. It wasn't guilt, exactly. It was clarity. A sudden, sharp sense of where you're actually coming from, and what the rest of the world has quietly convinced you that you need.
-
-  The next morning, before we left, the woman of the house pressed a small packet of roasted maize into my hands — for the trail, she said, like it was nothing. I tried to pay for it. She refused, the same firm, gentle wave from the day before. I understood, by then, not to push.
-
-  Walking back down the ridge, away from Gurdum, the trail felt different than it had on the way up. Lighter, maybe. Or I was just carrying it differently — not as a memory of a nice homestay, but as a kind of recalibration. A reminder that immaculate doesn't require abundance, that generosity doesn't require excess, and that some of the most complete, unhurried, dignified lives are being lived quietly on a hillside, far from anything that calls itself "developed."
-
-  I came to Gurdum for a trek. I left with a new ruler to measure things by.
-
-  Thank you, Gurdum. I hope I carry you with me longer than the maize lasted.`,
+  I came to Gurdum for a place to sleep. I left with a new ruler to measure people by.`,
   },
 ];
 

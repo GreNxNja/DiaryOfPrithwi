@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { allPosts } from "@/data/posts";
 import BlogHeader from "@/components/BlogHeader";
 import BlogFooter from "@/components/BlogFooter";
+import LocationMap from "@/components/LocationMap";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -50,7 +51,7 @@ const BlogPost = () => {
             className="md:w-1/3 md:shrink-0"
           >
             <div className="md:sticky md:top-20">
-              <div className="aspect-[4/5] rounded-lg overflow-hidden">
+              <div className="aspect-[4/5] rounded-lg overflow-hidden mb-6">
                 <img
                   src={post.image}
                   alt={post.title}
@@ -59,6 +60,7 @@ const BlogPost = () => {
                   height={1000}
                 />
               </div>
+              {post.locations && <LocationMap locations={post.locations} />}
             </div>
           </motion.div>
 
