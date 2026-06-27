@@ -68,7 +68,7 @@ const BlogHeader = () => {
             </button>
           </SheetTrigger>
           <SheetContent side="right" className="w-3/4 sm:max-w-xs">
-            <span className="font-heading text-lg font-bold text-foreground block mb-2">
+            <span className="font-heading text-lg font-bold text-foreground block mb-8 pb-4 border-b border-border">
               Index
             </span>
             <nav className="flex flex-col gap-6">

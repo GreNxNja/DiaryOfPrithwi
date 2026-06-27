@@ -74,9 +74,16 @@ const BlogHero = () => {
 
           <motion.a
             href="#latest-stories"
-            className="inline-flex flex-col items-center gap-1 font-body text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("latest-stories")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="inline-flex flex-col items-center gap-1 font-body text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors cursor-pointer"
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            whileTap={{ scale: 0.85 }}
           >
             Begin reading
             <ChevronDown className="w-4 h-4" />
