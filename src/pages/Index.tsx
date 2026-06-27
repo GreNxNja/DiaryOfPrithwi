@@ -9,7 +9,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <BlogHeader />
       <BlogHero />
-      <section className="container pb-20">
+      <section id="latest-stories" className="container pt-16 md:pt-20 pb-20 scroll-mt-20">
         <div className="flex items-center justify-between mb-12">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
             Latest Stories
