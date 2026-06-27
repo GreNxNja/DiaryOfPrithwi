@@ -1,7 +1,7 @@
 import BlogHeader from "@/components/BlogHeader";
 import BlogHero from "@/components/BlogHero";
-import BlogCard from "@/components/BlogCard";
 import BlogFooter from "@/components/BlogFooter";
+import StorySection from "@/components/StorySection";
 import { sortedPosts, sortedTechPosts, sortedCulturePosts } from "@/data/posts";
 
 const Index = () => {
@@ -9,57 +9,22 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <BlogHeader />
       <BlogHero />
-      <section id="latest-stories" className="container pt-16 md:pt-20 pb-20 scroll-mt-20">
-        <div className="flex items-center justify-between mb-12">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-            Latest Stories
-          </h2>
-          <div className="hidden md:flex items-center gap-1">
-            <div className="w-12 h-[2px] bg-primary" />
-            <div className="w-4 h-[2px] bg-border" />
-            <div className="w-4 h-[2px] bg-border" />
-          </div>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
-          {sortedPosts.map((post, i) => (
-            <BlogCard key={post.slug} {...post} index={i} />
-          ))}
-        </div>
-      </section>
-      <section className="container pb-20">
-        <div className="flex items-center justify-between mb-12">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-            Tech & Digital
-          </h2>
-          <div className="hidden md:flex items-center gap-1">
-            <div className="w-12 h-[2px] bg-primary" />
-            <div className="w-4 h-[2px] bg-border" />
-            <div className="w-4 h-[2px] bg-border" />
-          </div>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
-          {sortedTechPosts.map((post, i) => (
-            <BlogCard key={post.slug} {...post} index={i} />
-          ))}
-        </div>
-      </section>
-      <section className="container pb-20">
-        <div className="flex items-center justify-between mb-12">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-            Culture
-          </h2>
-          <div className="hidden md:flex items-center gap-1">
-            <div className="w-12 h-[2px] bg-primary" />
-            <div className="w-4 h-[2px] bg-border" />
-            <div className="w-4 h-[2px] bg-border" />
-          </div>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
-          {sortedCulturePosts.map((post, i) => (
-            <BlogCard key={post.slug} {...post} index={i} />
-          ))}
-        </div>
-      </section>
+      <StorySection
+        id="latest-stories"
+        title="Latest Stories"
+        posts={sortedPosts}
+        className="container scroll-mt-20 pb-20 pt-16 md:pt-20"
+      />
+      <StorySection
+        title="Tech & Digital"
+        posts={sortedTechPosts}
+        className="container pb-20"
+      />
+      <StorySection
+        title="Culture"
+        posts={sortedCulturePosts}
+        className="container pb-20"
+      />
       <BlogFooter />
     </div>
   );
