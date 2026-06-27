@@ -24,6 +24,7 @@ export interface BlogPost {
   readTime: string;
   content: string;
   locations?: BlogPostLocation[];
+  authorNote?: string;
 }
 
 export const posts: BlogPost[] = [
@@ -37,6 +38,7 @@ export const posts: BlogPost[] = [
     date: "Mar 10, 2026",
     readTime: "7 min read",
     locations: [{ name: "Kashi Vishwanath, Varanasi", lat: 25.3109, lng: 83.0107 }],
+    authorNote: "— written with wet shoes, somewhere on the ghats.",
     content: `There are places on this earth that don't just move you — they unmake you, quietly, and put you back together differently. Varanasi is one of them. Kashi Vishwanath is its beating heart.
 
 The city hits you before you even arrive. Somewhere on the approach — whether by train, by road, or by boat on the Ganga — the air changes. It becomes heavier, thicker, laced with the smell of incense and marigold and river clay. There's a feeling that something is asking you to slow down, not as a suggestion but as a quiet command. You lower your voice without knowing why.
@@ -73,6 +75,7 @@ And you will return. Everyone does.`,
     date: "Apr 09, 2026",
     readTime: "8 min read",
     locations: [{ name: "Golden Temple, Amritsar", lat: 31.62, lng: 74.8765 }],
+    authorNote: "— written still tasting the malai lassi.",
     content: `There are cities that impress you. And then there’s Amritsar — a place where you feel royalty the moment you step in.
 
   Punjab’s spirit hits you instantly. The air feels cleaner, the roads wider and better maintained, the architecture grand yet graceful, and the culture so vibrant that you don’t just observe it — you want to dive in and become part of it. The people carry themselves with a natural pride and warmth. Even the women have a graceful confidence that adds to the charm of the city. There’s an unmistakable regal energy in Amritsar that makes you sit up straighter and smile wider.
@@ -122,6 +125,7 @@ And you will return. Everyone does.`,
     date: "Apr 04, 2026",
     readTime: "6 min read",
     locations: [{ name: "Lotus Temple, Delhi", lat: 28.5535, lng: 77.2588 }],
+    authorNote: "— written at 4 a.m., still slightly chaotic.",
     content: `The 4th of April didn’t start like a peaceful travel day. It started at 4 a.m. in complete chaos.
 
   We had just arrived in Delhi as part of our North India bus tour, and the bus terminus was already alive — crowded, noisy, and slightly overwhelming. At that hour, one thing became very clear very quickly: finding a public washroom was going to be a task. A long queue had already formed, and there wasn’t much choice but to wait it out.
@@ -168,6 +172,7 @@ And you will return. Everyone does.`,
     date: "Apr 05, 2026",
     readTime: "7 min read",
     locations: [{ name: "Taj Mahal, Agra", lat: 27.1751, lng: 78.0421 }],
+    authorNote: "— written somewhat less cynical than I arrived.",
     content: `If Taj Mahal had a reputation to live up to, I wasn’t buying into it—at least not at first.
 
   Coming straight from Delhi, I was already overstimulated. Too much travel, too many places, too many “must-see” spots. The Taj, for me, was just another checkbox. Overhyped, over-photographed, over-discussed. I was curious, sure—but not excited.
@@ -229,6 +234,7 @@ And you will return. Everyone does.`,
     date: "Apr 08, 2026",
     readTime: "8 min read",
     locations: [{ name: "Dehradun, Uttarakhand", lat: 30.3165, lng: 78.0322 }],
+    authorNote: "— written years later, still thinking about that Tiger.",
     content: `In 2019, I went to Dehradun for what I thought would be an ordinary trip. I came back carrying a dream that still rides with me.
 
   The city welcomed me with that special Himalayan foothills air — crisp, slightly sweet with pine, and carrying the promise of mountains just beyond the horizon. But it wasn’t the city itself that shifted something in me. It was the road that climbs out of it.
@@ -268,6 +274,7 @@ And you will return. Everyone does.`,
       { name: "Adi Kailash, Uttarakhand", lat: 30.2333, lng: 80.65 },
       { name: "Tungnath, Uttarakhand", lat: 30.4869, lng: 79.2167 },
     ],
+    authorNote: "— written with legs that haven't forgiven me yet.",
     content: `There are callings that arrive like thunder. And then there is Shiva’s call — quiet, persistent, returning after years of silence, astonishing you every single time it surfaces.
 
   Recently, that familiar pull has grown stronger. After all these years of travel, of chasing mountains, temples, and inner stillness, the call to Adi Kailash and Tungnath has returned. It doesn’t shout. It doesn’t create restless excitement. It simply sits in the chest like a deep, steady flame — warm, certain, and impossible to ignore.
@@ -313,6 +320,7 @@ export const techPosts: BlogPost[] = [
       "What if a wearable device could safely divert electricity away from an electrician's body during an accidental shock and store it for later use? Exploring a bold safety + energy harvesting concept.",
     date: "Mar 30, 2026",
     readTime: "10 min read",
+    authorNote: "— written at 2 a.m., for reasons that should concern someone.",
     content: `What if a wearable device could safely divert electricity away from an electrician's body during an accidental shock and store it for later use? Exploring a bold safety + energy harvesting concept.
 
 Imagine this: An electrician in the middle of a busy job in Kolkata reaches into a panel, makes contact with a live 230V wire, and instead of a dangerous shock coursing through their chest, the electricity is instantly rerouted around their vital organs and captured in a wearable battery pack. Moments later, that stored energy powers their drill, charges their phone, or lights up the workspace.
@@ -393,6 +401,7 @@ Stay safe, and keep thinking creatively.`,
       "Not every algorithm is about efficiency and linear steps. What if there was one designed to break your robotic patterns, pull you back to primal roots, and help you genuinely reboot as a human being?",
     date: "Jun 16, 2026",
     readTime: "11 min read",
+    authorNote: "— written while procrastinating something far more robotic.",
     content: `Most algorithms we encounter are predictable. Input → Process → Output. If this, then that. Clean, logical, robotic.
 
   But recently I’ve been fascinated by a different kind — the out-of-the-box ones. The ones that don’t just solve a problem; they force you to reconsider the very nature of the problem itself. They make you pause and ask: What does this task truly want from me? What part of my humanity have I forgotten while trying to be efficient?
@@ -487,6 +496,7 @@ export const culturePosts: BlogPost[] = [
     date: "Jun 19, 2026",
     readTime: "6 min read",
     locations: [{ name: "Gurdum, West Sikkim", lat: 27.405, lng: 88.213 }],
+    authorNote: "— written still out of breath from those stairs.",
     content: `Some places teach you geography. Gurdum taught me arithmetic — the kind where people who have almost nothing somehow keep giving you more than you can carry.
 
   Gurdum was the first place we stayed on our Darjeeling trip — day one — and it set the tone for everything that came after. The building itself was something else. It must have been thirteen or fourteen storeys tall, built straight into the slope of the mountain, and to get to where we were staying we had to climb a long stretch of steep stairs. Somewhere partway up, my breath started giving out on me. I was genuinely struggling, stopping every few steps just to get air back into my lungs.

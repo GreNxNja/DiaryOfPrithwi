@@ -5,6 +5,13 @@ import { allPosts } from "@/data/posts";
 import BlogHeader from "@/components/BlogHeader";
 import BlogFooter from "@/components/BlogFooter";
 import LocationMap from "@/components/LocationMap";
+import ReadingProgress from "@/components/ReadingProgress";
+
+const fallbackAuthorNotes = [
+  "— written somewhere with bad signal.",
+  "— written between two cups of chai.",
+  "— still editing this in my head.",
+];
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -25,8 +32,13 @@ const BlogPost = () => {
     );
   }
 
+  const authorNote =
+    post.authorNote ??
+    fallbackAuthorNotes[post.slug.length % fallbackAuthorNotes.length];
+
   return (
     <div className="min-h-screen bg-background">
+      <ReadingProgress />
       <BlogHeader />
       <article className="w-full px-6 md:px-12 py-12 md:py-20">
         <motion.div
@@ -96,6 +108,10 @@ const BlogPost = () => {
                 </p>
               ))}
             </motion.div>
+
+            <p className="font-body text-sm text-muted-foreground italic mt-2">
+              {authorNote}
+            </p>
           </div>
         </div>
       </article>

@@ -50,7 +50,7 @@ const CategoryPage = () => {
           </div>
         ) : (
           <p className="font-body text-muted-foreground text-center py-20">
-            No stories in this category yet.
+            Nothing here yet — this corner of the journal is still being written.
           </p>
         )}
       </section>

@@ -40,9 +40,14 @@ const BlogCard = ({ slug, image, category, title, excerpt, date, readTime, index
       <p className="font-body text-muted-foreground leading-relaxed mb-4 line-clamp-2">
         {excerpt}
       </p>
-      <span className="font-body text-sm text-muted-foreground">
-        {date} · {readTime}
-      </span>
+      <div className="flex items-center justify-between">
+        <span className="font-body text-sm text-muted-foreground">
+          {date} · {readTime}
+        </span>
+        <span className="font-body text-sm font-medium text-primary opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+          Read story →
+        </span>
+      </div>
     </motion.article>
     </Link>
   );
