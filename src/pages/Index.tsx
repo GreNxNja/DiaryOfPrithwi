@@ -2,7 +2,7 @@ import BlogHeader from "@/components/BlogHeader";
 import BlogHero from "@/components/BlogHero";
 import BlogCard from "@/components/BlogCard";
 import BlogFooter from "@/components/BlogFooter";
-import { posts, techPosts } from "@/data/posts";
+import { sortedPosts, sortedTechPosts, sortedCulturePosts } from "@/data/posts";
 
 const Index = () => {
   return (
@@ -21,7 +21,7 @@ const Index = () => {
           </div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
-          {posts.map((post, i) => (
+          {sortedPosts.map((post, i) => (
             <BlogCard key={post.slug} {...post} index={i} />
           ))}
         </div>
@@ -38,7 +38,24 @@ const Index = () => {
           </div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
-          {techPosts.map((post, i) => (
+          {sortedTechPosts.map((post, i) => (
+            <BlogCard key={post.slug} {...post} index={i} />
+          ))}
+        </div>
+      </section>
+      <section className="container pb-20">
+        <div className="flex items-center justify-between mb-12">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+            Culture
+          </h2>
+          <div className="hidden md:flex items-center gap-1">
+            <div className="w-12 h-[2px] bg-primary" />
+            <div className="w-4 h-[2px] bg-border" />
+            <div className="w-4 h-[2px] bg-border" />
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
+          {sortedCulturePosts.map((post, i) => (
             <BlogCard key={post.slug} {...post} index={i} />
           ))}
         </div>

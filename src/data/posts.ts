@@ -498,4 +498,11 @@ export const culturePosts: BlogPost[] = [
   },
 ];
 
-export const allPosts = [...posts, ...techPosts, ...culturePosts];
+const byDateDesc = (a: BlogPost, b: BlogPost) =>
+  new Date(b.date).getTime() - new Date(a.date).getTime();
+
+export const allPosts = [...posts, ...techPosts, ...culturePosts].sort(byDateDesc);
+
+export const sortedPosts = [...posts].sort(byDateDesc);
+export const sortedTechPosts = [...techPosts].sort(byDateDesc);
+export const sortedCulturePosts = [...culturePosts].sort(byDateDesc);
