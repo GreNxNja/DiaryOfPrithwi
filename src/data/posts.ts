@@ -515,6 +515,17 @@ export const culturePosts: BlogPost[] = [
   },
 ];
 
+// Formats a location's lat/lng into a field-log style coordinate string,
+// e.g. { lat: 30.233, lng: 80.65 } -> "30.233° N · 80.650° E".
+export const formatCoordinates = (
+  location?: BlogPostLocation
+): string | null => {
+  if (!location) return null;
+  const lat = `${Math.abs(location.lat).toFixed(3)}° ${location.lat >= 0 ? "N" : "S"}`;
+  const lng = `${Math.abs(location.lng).toFixed(3)}° ${location.lng >= 0 ? "E" : "W"}`;
+  return `${lat} · ${lng}`;
+};
+
 const byDateDesc = (a: BlogPost, b: BlogPost) =>
   new Date(b.date).getTime() - new Date(a.date).getTime();
 

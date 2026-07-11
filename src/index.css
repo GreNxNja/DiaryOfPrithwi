@@ -80,6 +80,11 @@
   }
 }
 
+@keyframes theme-wipe-twinkle {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 1; }
+}
+
 @layer base {
   * {
     @apply border-border;

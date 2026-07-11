@@ -12,7 +12,7 @@ const BlogFooter = () => {
         </div>
         <div className="text-center md:text-right">
           <p className="font-body text-sm text-muted-foreground">
-            © 2026 The Quiet Journal. No AI co-authors, just questionable WiFi.
+            © 2026 The Quiet Journal. Just questionable WiFi.
           </p>
           <p className="font-body text-xs text-muted-foreground/70 italic mt-1">
             Wrote all this probably lost in some remote village.

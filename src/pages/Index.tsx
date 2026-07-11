@@ -12,6 +12,7 @@ const Index = () => {
       <StorySection
         id="latest-stories"
         title="Latest Stories"
+        kicker="The field log"
         posts={sortedPosts}
         className="container scroll-mt-20 pb-20 pt-16 md:pt-20"
       />

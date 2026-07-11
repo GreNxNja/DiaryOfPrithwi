@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Clock } from "lucide-react";
+import {
+  formatCoordinates,
+  type BlogPostLocation,
+} from "@/data/posts";
+import Coordinates from "@/components/Coordinates";
 
 interface BlogCardProps {
   slug: string;
@@ -12,6 +17,8 @@ interface BlogCardProps {
   readTime: string;
   index: number;
   featured?: boolean;
+  entryNumber?: number;
+  locations?: BlogPostLocation[];
 }
 
 const ReadTimeChip = ({ readTime }: { readTime: string }) => (
@@ -31,17 +38,28 @@ const BlogCard = ({
   readTime,
   index,
   featured = false,
+  entryNumber = 1,
+  locations,
 }: BlogCardProps) => {
   if (featured) {
+    const coords = formatCoordinates(locations?.[0]);
+
     return (
-      <Link to={`/post/${slug}`} className="block">
+      <Link to={`/post/${slug}`} className="group block">
         <motion.article
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="group grid items-center gap-6 md:grid-cols-12 md:gap-10"
+          className="relative grid items-center gap-6 md:grid-cols-12 md:gap-10"
         >
-          <div className="relative aspect-[16/10] overflow-hidden rounded-xl ring-1 ring-border md:col-span-7">
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-10 -left-1 z-0 select-none font-heading text-[7rem] font-bold leading-none text-primary/[0.08] md:-top-12 md:text-[8rem]"
+          >
+            {String(entryNumber).padStart(2, "0")}
+          </span>
+
+          <div className="relative z-10 aspect-[16/10] overflow-hidden rounded-xl ring-1 ring-border md:col-span-7">
             <img
               src={image}
               alt={title}
@@ -50,10 +68,19 @@ const BlogCard = ({
             />
             <ReadTimeChip readTime={readTime} />
           </div>
-          <div className="md:col-span-5">
-            <span className="mb-3 block font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-              {category}
-            </span>
+
+          <div className="relative z-10 md:col-span-5">
+            <div className="mb-3 flex flex-wrap items-center gap-3">
+              <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                {category}
+              </span>
+              {coords && (
+                <>
+                  <span className="h-px w-4 bg-border" />
+                  <Coordinates value={coords} />
+                </>
+              )}
+            </div>
             <h3 className="mb-4 font-heading text-3xl font-bold leading-tight text-foreground transition-colors group-hover:text-primary md:text-4xl">
               {title}
             </h3>
