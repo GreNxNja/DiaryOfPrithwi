@@ -1,12 +1,13 @@
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { ArrowUpRight, Menu } from "lucide-react";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
   SheetClose,
+  SheetTitle,
 } from "@/components/ui/sheet";
 import { allPosts } from "@/data/posts";
 import { navCategories } from "@/data/navigation";
@@ -74,25 +75,43 @@ const BlogHeader = () => {
                   <span className="absolute left-0 -bottom-0.5 h-[1.5px] w-full bg-primary scale-x-0 origin-left group-hover:scale-x-100 group-active:scale-x-100 transition-transform duration-300" />
                 </button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-3/4 sm:max-w-xs">
-                <span className="font-heading text-lg font-bold text-foreground block mb-8 pb-4 border-b border-border">
-                  Index
-                </span>
-                <nav className="flex flex-col gap-6">
-                  {navCategories.map((item, i) => (
-                    <SheetClose asChild key={item.label}>
-                      <Link
-                        to={item.path}
-                        className="flex items-center gap-3 font-body text-base font-medium text-foreground hover:text-primary transition-colors tracking-wide uppercase"
-                      >
-                        <span className="font-body text-xs font-semibold text-primary/50">
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
-                        {item.label}
-                      </Link>
-                    </SheetClose>
-                  ))}
-                </nav>
+              <SheetContent
+                side="right"
+                className="w-64 border-l-2 border-double border-foreground/70 p-0 sm:max-w-[280px]"
+              >
+                <div className="flex h-full flex-col">
+                  <div className="border-b-4 border-double border-foreground/70 px-6 py-6 text-center">
+                    <SheetTitle className="font-heading text-xl font-black tracking-tight text-foreground block">
+                      The Quiet Journal
+                    </SheetTitle>
+                    <span className="mt-1 block font-body text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">
+                      Index
+                    </span>
+                  </div>
+
+                  <nav className="flex-1 overflow-y-auto px-6">
+                    {navCategories.map((item, i) => (
+                      <SheetClose asChild key={item.label}>
+                        <Link
+                          to={item.path}
+                          className="group flex items-center justify-between gap-2 border-b border-border py-4 font-body text-base font-medium uppercase tracking-wide text-foreground transition-colors first:pt-5 hover:text-primary"
+                        >
+                          <span className="flex items-center gap-3">
+                            <span className="font-heading text-2xl font-bold text-foreground/15 transition-colors group-hover:text-primary/30">
+                              {String(i + 1).padStart(2, "0")}
+                            </span>
+                            {item.label}
+                          </span>
+                          <ArrowUpRight className="h-4 w-4 shrink-0 text-muted-foreground/50 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
+                        </Link>
+                      </SheetClose>
+                    ))}
+                  </nav>
+
+                  <div className="border-t border-border/70 px-6 py-3 text-center font-body text-[9px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                    Vol. I · Nº {String(allPosts.length).padStart(2, "0")}
+                  </div>
+                </div>
               </SheetContent>
             </Sheet>
           </div>
