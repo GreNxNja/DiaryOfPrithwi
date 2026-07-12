@@ -9,14 +9,8 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import { allPosts } from "@/data/posts";
+import { navCategories } from "@/data/navigation";
 import ThemeToggle from "@/components/ThemeToggle";
-
-const navCategories = [
-  { label: "Nature", path: "/category/nature" },
-  { label: "Travel", path: "/category/travel" },
-  { label: "Tech", path: "/category/tech" },
-  { label: "Culture", path: "/category/culture" },
-];
 
 const taglines = [
   "probably overthinking this",
@@ -48,7 +42,6 @@ const BlogHeader = () => {
       <div className="hidden border-b border-border/70 sm:block">
         <div className="container flex items-center justify-between py-1.5 font-body text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
           <span>Vol. I · Nº {String(allPosts.length).padStart(2, "0")}</span>
-          <span className="hidden md:inline">Travel · Tech · Culture</span>
           <span>{todayLabel}</span>
         </div>
       </div>
@@ -67,13 +60,13 @@ const BlogHeader = () => {
             {tagline}
           </span>
 
-          <ThemeToggle className="absolute right-16 top-0 sm:right-20 md:right-14 xl:right-16" />
+          <div className="absolute right-4 top-3 flex items-start gap-4 sm:right-6 md:right-2 xl:right-4">
+            <ThemeToggle />
 
-          <div className="absolute right-4 top-1/2 flex -translate-y-1/2 items-center gap-2">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <button
-                  className="md:hidden group relative flex items-center gap-1.5 font-body text-xs font-semibold uppercase tracking-[0.2em] text-foreground py-2"
+                  className="md:hidden group relative flex items-center gap-1.5 font-body text-xs font-semibold uppercase tracking-[0.2em] text-foreground py-1"
                   aria-label="Open menu"
                 >
                   <Menu className="h-4 w-4" />
