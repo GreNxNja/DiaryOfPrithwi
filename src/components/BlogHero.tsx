@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, MapPin } from "lucide-react";
 import { allPosts } from "@/data/posts";
+import Typewriter from "@/components/Typewriter";
 
 // Faint topographic texture behind the hero. Flip to false to remove it
 // entirely — nothing else in the component depends on it.
@@ -33,6 +35,7 @@ const BlogHero = () => {
   const places = Array.from(
     new Set(allPosts.flatMap((p) => p.locations?.map((l) => l.name) ?? []))
   );
+  const [headlineDone, setHeadlineDone] = useState(false);
 
   return (
     <section className="relative overflow-hidden border-b border-border">
@@ -61,15 +64,41 @@ const BlogHero = () => {
           </div>
 
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-6">
-            Slow stories,
-            <br />
-            <span className="italic font-medium text-primary">told properly.</span>
+            <Typewriter
+              segments={[
+                { text: "Slow stories,\n" },
+                { text: "told properly.", className: "italic font-medium text-primary" },
+              ]}
+              speed={45}
+              startDelay={400}
+              onDone={() => setHeadlineDone(true)}
+            />
           </h1>
 
-          <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-md mx-auto mb-10">
-            Travel, tech, and culture — written between trains, temples, and
-            questionable WiFi. No listicles, no SEO bait, just things worth
-            slowing down for.
+          <motion.div
+            initial={{ opacity: 0, y: -6 }}
+            animate={headlineDone ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="mx-auto mb-8 flex max-w-xs items-center justify-center gap-3 sm:max-w-sm"
+          >
+            <span className="h-px flex-1 bg-foreground/25" />
+            <span className="whitespace-nowrap font-body text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+              By Prithwijit · Field Notes Edition
+            </span>
+            <span className="h-px flex-1 bg-foreground/25" />
+          </motion.div>
+
+          <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-md mx-auto mb-10 min-h-[4.5em]">
+            <Typewriter
+              segments={[
+                {
+                  text: "Travel, tech, and culture — written between trains, temples, and questionable WiFi. No listicles, no SEO bait, just things worth slowing down for.",
+                },
+              ]}
+              speed={12}
+              active={headlineDone}
+              cursorClassName="bg-muted-foreground"
+            />
           </p>
 
           <motion.a
