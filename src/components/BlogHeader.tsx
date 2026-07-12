@@ -67,9 +67,9 @@ const BlogHeader = () => {
             {tagline}
           </span>
 
-          <div className="absolute right-4 top-1/2 flex -translate-y-1/2 items-center gap-2 md:right-0">
-            <ThemeToggle />
+          <ThemeToggle className="absolute right-16 top-0 sm:right-20 md:right-14 xl:right-16" />
 
+          <div className="absolute right-4 top-1/2 flex -translate-y-1/2 items-center gap-2">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <button
